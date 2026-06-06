@@ -23,102 +23,102 @@ The goal is to help developers confidently answer OOP questions in technical int
 
 ---
 
-### Questions
+## Questions
 
-1. [What is OOP?](#what-is-oop)
-2. [Four Pillars of OOP](#four-pillars-of-oop)
-3. [OOP Interview One-Line Definitions](#oop-interview-one-line-definitions) 
-4. [OOPs Concepts](oop-concept)
+1. [What is OOP?](#1-what-is-oop)
+2. [Four Pillars of OOP](#2-four-pillars-of-oop)
+3. [OOP Interview One-Line Definitions](#3-oop-interview-one-line-definitions) 
+4. [OOPs Concepts](#4-oop-concept)
 
 ---
 
-1.  ### What is OOP?
+## 1. What is OOP?
+Object-Oriented Programming (OOP) is a programming style that organizes code using objects, which contain data (properties) and behavior (methods).
 
-        Object-Oriented Programming (OOP) is a programming style that organizes code using objects, which contain data (properties) and behavior (methods).
+## 2. Four Pillars of OOP
+### a)  Abstraction
+Data abstraction refers to the act of representing essential features without including the background detail or explanation.
 
-2. ### Four Pillars of OOP
-        a)  **Abstraction**
-            Data abstraction refers to the act of representing essential features without including the background detail or explanation.
-            **Example:** We drive a car without thinking that how car subsystems is working.
+**Example:**
+We drive a car without thinking that how car subsystems is working.
+```php
+abstract class Vehicle
+{
+    abstract public function start();
+}
 
-            ```php
-            abstract class Vehicle
-            {
-                abstract public function start();
-            }
+class Car extends Vehicle
+{
+    public function start()
+    {
+        echo "Car Started";
+    }
+}
+```
 
-            class Car extends Vehicle
-            {
-                public function start()
-                {
-                    echo "Car Started";
-                }
-            }
-            ```
+### b) Encapsulation
+Wrapping data and methods into a single unit and controlling access.
+```php
+class BankAccount
+{
+    private $balance = 1000;
 
-        b)  **Encapsulation**
-            Wrapping data and methods into a single unit and controlling access.
+    public function getBalance()
+    {
+        return $this->balance;
+    }
+}
 
-            ```php
-            class BankAccount
-            {
-                private $balance = 1000;
+```
+    
+### c) Inheritance
+Inheritance is the process by which one object acquires the properties of another class
+```php
+class Animal
+{
+    public function eat()
+    {
+        echo "Eating";
+    }
+}
 
-                public function getBalance()
-                {
-                    return $this->balance;
-                }
-            }
+class Dog extends Animal
+{
+}
+```
 
-            ```
-        
-        c)  **Inheritance**
-            Inheritance is the process by which one object acquires the properties of another class
-            ```php
-            class Animal
-            {
-                public function eat()
-                {
-                    echo "Eating";
-                }
-            }
+### d) Polymorphism
 
-            class Dog extends Animal
-            {
-            }
-            ```
+Polymorphism means ability to take more the one form
+```php
+class Animal
+{
+    public function sound()
+    {
+        echo "Animal Sound";
+    }
+}
 
-        d)  **Polymorphism**
-            Polymorphism means ability to take more the one form
-            ```php
-            class Animal
-            {
-                public function sound()
-                {
-                    echo "Animal Sound";
-                }
-            }
+class Dog extends Animal
+{
+    public function sound()
+    {
+        echo "Bark";
+    }
+}
+```
 
-            class Dog extends Animal
-            {
-                public function sound()
-                {
-                    echo "Bark";
-                }
-            }
-            ```
+## 3. OOP Interview One-Line Definitions
 
-
-3. ### OOP Interview One-Line Definitions
-        | Concept       | Definition                                           |
-        | ------------- | ---------------------------------------------------- |
-        | OOP           | Programming using objects and classes                |
-        | Class         | Blueprint for creating objects                       |
-        | Object        | Instance of a class                                  |
-        | Property      | Variable inside a class                              |
-        | Method        | Function inside a class                              |
-        | Constructor   | Method called automatically when object is created   |
-        | Encapsulation | Hiding data and controlling access                   |
-        | Inheritance   | Acquiring properties and methods from another class  |
-        | Polymorphism  | Same method behaves differently                      |
-        | Abstraction   | Hiding implementation details and showing essentials |
+    | Concept       | Definition                                           |
+    | ------------- | ---------------------------------------------------- |
+    | OOP           | Programming using objects and classes                |
+    | Class         | Blueprint for creating objects                       |
+    | Object        | Instance of a class                                  |
+    | Property      | Variable inside a class                              |
+    | Method        | Function inside a class                              |
+    | Constructor   | Method called automatically when object is created   |
+    | Encapsulation | Hiding data and controlling access                   |
+    | Inheritance   | Acquiring properties and methods from another class  |
+    | Polymorphism  | Same method behaves differently                      |
+    | Abstraction   | Hiding implementation details and showing essentials |

@@ -27,8 +27,8 @@ The goal is to help developers confidently answer OOP questions in technical int
 
 1. [What is OOP?](#1-what-is-oop)
 2. [Four Pillars of OOP](#2-four-pillars-of-oop)
-3. [OOP Interview One-Line Definitions](#3-oop-interview-one-line-definitions) 
-4. [OOPs Concepts](#4-oop-concept)
+3. [OOPs Concepts](#3-oop-concept)
+4. [OOP Concepts Interview One-Line Definitions](#4-oop-concept-interview-one-line-definitions) 
 
 ---
 
@@ -88,7 +88,6 @@ class Dog extends Animal
 ```
 
 ### d) Polymorphism
-
 Polymorphism means ability to take more the one form
 ```php
 class Animal
@@ -108,17 +107,25 @@ class Dog extends Animal
 }
 ```
 
-## 3. OOP Interview One-Line Definitions
+## 3. OOP Concept
+There are 8 type of oop concept:
+1. Object
+2. Class
+3. Encapsultion
+4. Abstraction
+5. Polymorphism
+6. Inheritance
+7. Message Passing
+8. Dynamic Binding
 
-    | Concept       | Definition                                           |
-    | ------------- | ---------------------------------------------------- |
-    | OOP           | Programming using objects and classes                |
-    | Class         | Blueprint for creating objects                       |
-    | Object        | Instance of a class                                  |
-    | Property      | Variable inside a class                              |
-    | Method        | Function inside a class                              |
-    | Constructor   | Method called automatically when object is created   |
-    | Encapsulation | Hiding data and controlling access                   |
-    | Inheritance   | Acquiring properties and methods from another class  |
-    | Polymorphism  | Same method behaves differently                      |
-    | Abstraction   | Hiding implementation details and showing essentials |
+### 4. OOP Concept Interview One Line Definitions
+| Concept           | Definition                                                            |
+| ----------------- | --------------------------------------------------------------------- |
+| Object            | Instance of a class                                                   |
+| Class             | Blueprint for creating objects                                        |
+| Encapsulation     | Hiding data and controlling access                                    |
+| Abstraction       | Hiding implementation details and showing essentials                  |
+| Polymorphism      | Same method behaves differently                                       |
+| Inheritance       | Acquiring properties and methods from another class                   |
+| Message Passing   | Communication between objects by calling methods and exchanging data  |
+| Dynamic Binding   | Deciding which method to execute at runtime instead of compile time   |

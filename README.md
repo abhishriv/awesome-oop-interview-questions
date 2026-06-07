@@ -148,6 +148,12 @@ Abstraction means exposing what an object does while hiding how it does it<br>
 Encapsulation is the process of wrapping data and methods into a single unit (class) and restricting direct access to data using access modifiers like private, protected, and public.<br>
 **or**
 Encapsulation means hiding data inside a class and allowing access to it only through methods<br>
+<div>
+<p align="center">
+    <img src="./assets/Encapsulation.png" alt="Encapsulation" width="50%">
+</p>
+</div><br>
+
 **Example:** 
 ```php
 class Employee

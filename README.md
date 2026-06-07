@@ -29,6 +29,10 @@ The goal is to help developers confidently answer OOP questions in technical int
 2. [Four Pillars of OOP](#2-four-pillars-of-oop)
 3. [OOPs Concepts](#3-oop-concept)
 4. [OOP Concepts Interview One-Line Definitions](#4-oop-concept-interview-one-line-definitions) 
+5. [What is Abstraction](#5-what-is-abstraction)
+6. [What is Encapsulation](#6-what-is-encapsulation)
+7. What is Inheritance
+8. What is Polymorphism
 
 ---
 
@@ -119,6 +123,7 @@ There are 8 type of oop concept:
 8. Dynamic Binding
 
 ### 4. OOP Concept Interview One Line Definitions
+
 | Concept           | Definition                                                            |
 | ----------------- | --------------------------------------------------------------------- |
 | Object            | Instance of a class                                                   |
@@ -129,3 +134,49 @@ There are 8 type of oop concept:
 | Inheritance       | Acquiring properties and methods from another class                   |
 | Message Passing   | Communication between objects by calling methods and exchanging data  |
 | Dynamic Binding   | Deciding which method to execute at runtime instead of compile time   |
+
+
+### 5. What is Abstraction
+
+Data Abstraction is the process of showing only the essential features of an object and hiding the internal implementation details from the user.<br>
+**or**<br>
+Abstraction means exposing what an object does while hiding how it does it<br>
+**Example:** You know **how to drive the car**, but you don't know **how the engine works internally**. That's Abstraction.
+
+### 6. What is Encapsulation
+
+Encapsulation is the process of wrapping data and methods into a single unit (class) and restricting direct access to data using access modifiers like private, protected, and public.<br>
+**or**
+Encapsulation means hiding data inside a class and allowing access to it only through methods<br>
+**Example:** 
+```php
+class Employee
+{
+    private $salary;
+
+    public function setSalary($salary)
+    {
+        if ($salary > 0) {
+            $this->salary = $salary;
+        }
+    }
+
+    public function getSalary()
+    {
+        return $this->salary;
+    }
+}
+
+$employee = new Employee();
+$employee->setSalary(50000);
+
+echo $employee->getSalary(); // 50000
+```
+Here, the salary cannot be modified directly:
+```php
+$employee->salary = -10000; // Error
+```
+Instead, it must go through setSalary(), which can validate the value before storing it. This is encapsulation.
+
+### 7. What is Inheritance
+

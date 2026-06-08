@@ -31,8 +31,24 @@ The goal is to help developers confidently answer OOP questions in technical int
 4. [OOP Concepts Interview One-Line Definitions](#4-oop-concept-interview-one-line-definitions) 
 5. [What is Abstraction](#5-what-is-abstraction)
 6. [What is Encapsulation](#6-what-is-encapsulation)
-7. What is Inheritance
-8. What is Polymorphism
+7. What is Inheritance ?
+8. What is Polymorphism ?
+9. What is namespace ?
+10. Explain access modifiers.
+11. Explain constructor.
+12. Explain Interface.
+13. What are magic functions ?
+14. What is static class and why we use it ?
+15. Difference between this and self this ?
+16. What are traits ?
+17. What is early binding and late binding ?
+18. What is final keyword ?
+19. What is function overloading and overriding ?
+20. What are design patterns ?
+21. What is singleton design pattern ?
+22. Difference in interface and abstract class ?
+23. What is message passing ?
+24. What is dynamic binding ?
 
 ---
 

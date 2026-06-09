@@ -31,7 +31,7 @@ The goal is to help developers confidently answer OOP questions in technical int
 4. [OOP Concepts Interview One-Line Definitions](#4-oop-concept-interview-one-line-definitions) 
 5. [What is Abstraction](#5-what-is-abstraction)
 6. [What is Encapsulation](#6-what-is-encapsulation)
-7. What is Inheritance ?
+7. [What is Inheritance](#7-what-is-inheritance)
 8. What is Polymorphism ?
 9. What is namespace ?
 10. Explain access modifiers.
@@ -202,3 +202,50 @@ Instead, it must go through setSalary(), which can validate the value before sto
 
 ### 7. What is Inheritance
 
+Inheretence is the process in which object one class acquire the property of object of another class.
+
+**Example:** 
+```php
+class Parents implements Info
+{
+
+	function __construct()
+	{
+		return "Parent Class Constructor</br>";
+	}
+
+	public function firstname()
+	{
+		return "The father name is rakesh";
+	}
+
+	function lastname($lname)
+	{
+		return " ".$lname."<br>";
+	}
+}
+
+class Childs extends Parents
+{
+	function __construct()
+	{
+		return "Child Class Constructor</br>";
+	}
+
+	public function firstname()
+	{
+		return "The son name is harry";
+	}
+}
+
+
+$pobj = new Parents();
+$cobj = new Childs();
+
+echo $pobj->firstname();
+echo $pobj->lastname('tiwari');
+
+echo "<br><br>";
+echo $cobj->firstname();
+echo $cobj->lastname('tiwari');
+```

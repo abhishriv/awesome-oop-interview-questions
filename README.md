@@ -32,23 +32,31 @@ The goal is to help developers confidently answer OOP questions in technical int
 5. [What is Abstraction](#5-what-is-abstraction)
 6. [What is Encapsulation](#6-what-is-encapsulation)
 7. [What is Inheritance](#7-what-is-inheritance)
-8. What is Polymorphism ?
-9. What is namespace ?
-10. Explain access modifiers.
-11. Explain constructor.
-12. Explain Interface.
-13. What are magic functions ?
-14. What is static class and why we use it ?
-15. Difference between this and self this ?
-16. What are traits ?
-17. What is early binding and late binding ?
-18. What is final keyword ?
-19. What is function overloading and overriding ?
-20. What are design patterns ?
-21. What is singleton design pattern ?
-22. Difference in interface and abstract class ?
-23. What is message passing ?
-24. What is dynamic binding ?
+8. [Types of Inheritance](#8-types-of-inheritance)
+9. What is Single inheritance.
+10. Multi-level inheritance.
+11. Multiple inheritance.
+12. Multipath inheritance.
+13. Hierarchical Inheritance.
+14. Hybrid Inheritance.
+15. What is Polymorphism
+16. What is message passing
+24. What is dynamic binding
+25. What is namespace ?
+26. Explain access modifiers.
+27. Explain constructor.
+28. Explain Interface.
+29. What are magic functions ?
+30. What is static class and why we use it ?
+31. Difference between this and self this ?
+32. What are traits ?
+33. What is early binding and late binding ?
+34. What is final keyword ?
+35. What is function overloading and overriding ?
+36. Difference in interface and abstract class ?
+37. What are design patterns ?
+38. Types of design patterns
+
 
 ---
 
@@ -249,3 +257,16 @@ echo "<br><br>";
 echo $cobj->firstname();
 echo $cobj->lastname('tiwari');
 ```
+
+### 8. Types of Inheritance
+
+1) Single inheritance.<br>
+2) Multi-level inheritance.<br>
+3) Multiple inheritance.<br>
+4) Multipath inheritance.<br>
+5) Hierarchical Inheritance.<br>
+6) Hybrid Inheritance.<br>
+
+**Note:** multiple inheritence is not support by php so we use interface.
+
+

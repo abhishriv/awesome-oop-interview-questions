@@ -39,7 +39,7 @@ The goal is to help developers confidently answer OOP questions in technical int
 12. Multipath inheritance.
 13. Hierarchical Inheritance.
 14. Hybrid Inheritance.
-15. What is Polymorphism
+15. [What is Polymorphism](#15-what-is-polymorphism)
 16. What is message passing
 24. What is dynamic binding
 25. What is namespace ?
@@ -270,3 +270,55 @@ echo $cobj->lastname('tiwari');
 **Note:** multiple inheritence is not support by php so we use interface.
 
 
+### 15. What is Polymorphism
+
+polymorphism ability to take more than one form
+
+**Example:**
+
+```php
+class Shap
+{
+	public function draw(){
+
+		echo "</br>this is a draw";
+	}
+}
+
+class Circle extends Shap
+{
+
+	public function draw()
+	{
+		echo "This is a Circle";
+	}
+}
+
+class Rectangle extends shap
+{
+	 public function draw()
+	 {
+	 	echo "</br>This is a Rectangle";
+	 }
+}
+
+class Triangle extends shap
+{
+	public function draw()
+	{
+		echo "</br>This is Triangle";
+	}
+}
+
+$val = array(3);
+
+$val[0] = new Circle();
+$val[1] = new Rectangle();
+$val[2] = new Triangle();
+$val[3] = new Shap();
+
+for($i=0;$i<=3;$i++)
+{
+	$val[$i]->draw();
+}
+```

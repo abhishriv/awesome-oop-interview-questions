@@ -40,7 +40,7 @@ The goal is to help developers confidently answer OOP questions in technical int
 13. Hierarchical Inheritance.
 14. Hybrid Inheritance.
 15. [What is Polymorphism](#15-what-is-polymorphism)
-16. What is message passing
+16. [What is Message Passing](#16-what-is-message-passing)
 24. What is dynamic binding
 25. What is namespace ?
 26. Explain access modifiers.
@@ -322,3 +322,32 @@ for($i=0;$i<=3;$i++)
 	$val[$i]->draw();
 }
 ```
+
+### 16. What is Message Passing
+
+Message passing is a mechanism by which objects communicate with each other. An object sends a message (method call) to another object requesting it to perform a specific operation. The receiving object executes the corresponding method and may return a result.
+**or**
+Message passing means calling a method of an object to request a service or action.
+
+```php
+class Calculator
+{
+    public function add($a, $b)
+    {
+        return $a + $b;
+    }
+}
+
+$calc = new Calculator();
+
+// Sending a message to the object
+$result = $calc->add(10, 20);
+
+echo $result; // 30
+```
+
+**Here:** <br>
+
+$calc is an object.<br>
+add(10, 20) is the message being sent.<br>
+The object receives the message and executes the add() method.<br>

@@ -41,9 +41,9 @@ The goal is to help developers confidently answer OOP questions in technical int
 14. Hybrid Inheritance.
 15. [What is Polymorphism](#15-what-is-polymorphism)
 16. [What is Message Passing](#16-what-is-message-passing)
-17. [What is Dynamic Binding (Late Binding)](#17-what-is-dynamic-binding-(late-binding))
+17. [What is Dynamic Binding (Late Binding)](#17-what-is-dynamic-binding-late-binding)
 18. What is Static Binding
-19. Difference between in early binding and late binding ?
+19. [Difference between Early Binding and Late Binding](#19-difference-between-early-binding-and-late-binding)
 20. What is namespace ?
 21. Explain access modifiers.
 22. Explain constructor.
@@ -349,9 +349,9 @@ echo $result; // 30
 
 **Here:** <br>
 
-$calc is an object.<br>
-add(10, 20) is the message being sent.<br>
-The object receives the message and executes the add() method.
+ $calc is an object.<br>
+ add(10, 20) is the message being sent.<br>
+ The object receives the message and executes the add() method. <br>
 
 ### 17. What is Dynamic Binding (Late Binding)
 
@@ -390,8 +390,21 @@ $animal = new Dog();
 <li>The actual object created is Dog</li>
 </ul>
 
-When: <br>
-$animal->sound(); is executed, PHP checks the actual object type (Dog) at runtime and calls: <br>
-Dog::sound() <br>
-This is **Dynamic Binding**.<br>
-**Reason:** Because the method call is resolved dynamically during execution, based on the actual object, rather than being fixed beforehand.
+ When: <br>
+ $animal->sound(); is executed, PHP checks the actual object type (Dog) at runtime and calls: <br>
+ Dog::sound() <br>
+ This is **Dynamic Binding**.<br>
+ **Reason:** Because the method call is resolved dynamically during execution, based on the actual object, rather than being fixed beforehand.
+
+
+### 19. Difference between Early Binding and Late Binding
+
+**Static Binding** means the method to execute is decided before execution (compile/parse time), while **Dynamic Binding** means the method to execute is decided during runtime based on the actual object type. Dynamic binding supports method overriding and runtime polymorphism.
+
+| Static Binding (Early Binding)                 | Dynamic Binding (Late Binding)                  |
+| ---------------------------------------------- | ----------------------------------------------- |
+| Resolved at compile time                       | Resolved at runtime                             |
+| Method to call is decided before program runs. | Method call is decided while program is running |
+| Used for non-overridden methods                | Used for overridden methods                     |
+| Faster                                         | Slightly slower due to runtime lookup           |
+| Used when method is not overridden             | Used with method overriding and inheritance     |

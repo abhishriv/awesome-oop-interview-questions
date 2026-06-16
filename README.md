@@ -41,21 +41,22 @@ The goal is to help developers confidently answer OOP questions in technical int
 14. Hybrid Inheritance.
 15. [What is Polymorphism](#15-what-is-polymorphism)
 16. [What is Message Passing](#16-what-is-message-passing)
-24. What is dynamic binding
-25. What is namespace ?
-26. Explain access modifiers.
-27. Explain constructor.
-28. Explain Interface.
-29. What are magic functions ?
-30. What is static class and why we use it ?
-31. Difference between this and self this ?
-32. What are traits ?
-33. What is early binding and late binding ?
-34. What is final keyword ?
-35. What is function overloading and overriding ?
-36. Difference in interface and abstract class ?
-37. What are design patterns ?
-38. Types of design patterns
+17. [What is Dynamic Binding (Late Binding)](#17-what-is-dynamic-binding-(late-binding))
+18. What is Static Binding
+19. Difference between in early binding and late binding ?
+20. What is namespace ?
+21. Explain access modifiers.
+22. Explain constructor.
+23. Explain Interface.
+24. What are magic functions ?
+25. What is static class and why we use it ?
+26. Difference between this and self this ?
+27. What are traits ?
+28. What is final keyword ?
+29. What is function overloading and overriding ?
+30. Difference in interface and abstract class ?
+31. What are design patterns ?
+32. Types of design patterns
 
 
 ---
@@ -350,4 +351,47 @@ echo $result; // 30
 
 $calc is an object.<br>
 add(10, 20) is the message being sent.<br>
-The object receives the message and executes the add() method.<br>
+The object receives the message and executes the add() method.
+
+### 17. What is Dynamic Binding (Late Binding)
+
+Dynamic Binding is the process of deciding which method to execute at runtime based on the actual object type.
+
+```php
+class Animal
+{
+    public function sound()
+    {
+        echo "Animal makes a sound";
+    }
+}
+
+class Dog extends Animal
+{
+    public function sound()
+    {
+        echo "Dog barks";
+    }
+}
+
+$animal = new Dog();
+$animal->sound();
+```
+
+**Output:** Dog barks <br>
+
+**What Happened?** <br>
+
+```php
+$animal = new Dog();
+```
+<ul>
+<li>The reference variable is $animal.</li>
+<li>The actual object created is Dog</li>
+</ul>
+
+When: <br>
+$animal->sound(); is executed, PHP checks the actual object type (Dog) at runtime and calls: <br>
+Dog::sound() <br>
+This is **Dynamic Binding**.<br>
+**Reason:** Because the method call is resolved dynamically during execution, based on the actual object, rather than being fixed beforehand.

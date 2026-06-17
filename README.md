@@ -44,7 +44,7 @@ The goal is to help developers confidently answer OOP questions in technical int
 17. [What is Dynamic Binding (Late Binding)](#17-what-is-dynamic-binding-late-binding)
 18. [What is Static Binding (Early Binding)](#18-what-is-static-binding-early-binding)
 19. [Difference between Early Binding and Late Binding](#19-difference-between-early-binding-and-late-binding)
-20. What is namespace ?
+20. [What is namespace ?](#20-what-is-namespace-)
 21. Explain access modifiers.
 22. Explain constructor.
 23. Explain Interface.
@@ -426,3 +426,44 @@ Here, PHP already knows that $car is a Car object, so it directly calls **Car::s
 | Used for non-overridden methods                | Used for overridden methods                     |
 | Faster                                         | Slightly slower due to runtime lookup           |
 | Used when method is not overridden             | Used with method overriding and inheritance     |
+
+### 20. What is namespace ?
+
+A namespace is a way to organize classes, functions, and constants and avoid name conflicts.
+
+or <br>
+
+A namespace is used to avoid conflicting definitions
+
+## Example:
+
+Suppose two developers create a class with the same name:<br>
+
+```php
+class User {}
+```
+and
+```php
+class User {}
+```
+Without namespaces, PHP will throw an error because it cannot distinguish between the two User classes.
+
+```php
+namespace App\Models;
+
+class User
+{
+}
+```
+```php
+namespace App\Admin;
+
+class User
+{
+}
+```
+Now both classes can exist together:
+```php
+$user1 = new App\Models\User();
+$user2 = new App\Admin\User();
+```

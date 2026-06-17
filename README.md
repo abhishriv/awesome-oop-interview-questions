@@ -42,7 +42,7 @@ The goal is to help developers confidently answer OOP questions in technical int
 15. [What is Polymorphism](#15-what-is-polymorphism)
 16. [What is Message Passing](#16-what-is-message-passing)
 17. [What is Dynamic Binding (Late Binding)](#17-what-is-dynamic-binding-late-binding)
-18. What is Static Binding
+18. [What is Static Binding (Early Binding)](#18-what-is-static-binding-early-binding)
 19. [Difference between Early Binding and Late Binding](#19-difference-between-early-binding-and-late-binding)
 20. What is namespace ?
 21. Explain access modifiers.
@@ -395,6 +395,24 @@ $animal = new Dog();
  Dog::sound() <br>
  This is **Dynamic Binding**.<br>
  **Reason:** Because the method call is resolved dynamically during execution, based on the actual object, rather than being fixed beforehand.
+
+### 18. What is Static Binding (Early Binding)
+
+It is the process of deciding which method to call at **compile time** (or before the program runs). It happens when the method is not overridden. It happens when the method is not overridden
+
+```php
+class Car
+{
+    public function start()
+    {
+        echo "Car started";
+    }
+}
+
+$car = new Car();
+$car->start();
+```
+Here, PHP already knows that $car is a Car object, so it directly calls **Car::start()**. This is static binding.
 
 
 ### 19. Difference between Early Binding and Late Binding
